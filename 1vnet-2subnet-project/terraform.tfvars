@@ -1,0 +1,13 @@
+resource_group_name = "sample-rg"
+
+location = "eastus"
+
+vnet_name = "sample-vnet"
+
+subnet_name = "aks-subnet"
+
+address_space = ["10.40.0.0/16"]
+
+subnet_prefix = "10.40.1.0/24"
+
+subnet_prefix2 = "10.40.2.0/24"
