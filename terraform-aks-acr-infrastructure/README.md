@@ -1,30 +1,38 @@
-# Terraform Azure Infrastructure Project
+# Terraform AKS ACR Infrastructure
 
-## 📌 Overview
-This project provisions Azure infrastructure using Terraform with modular architecture.
+Infrastructure as Code project for deploying and managing Azure Kubernetes Service (AKS) and Azure Container Registry (ACR).
 
-## 🚀 Features
-- Modular design
-- Resource Group & Subnet creation
-- Input validation
-- Tagging strategy
-- Remote state backend
+## Technologies
 
-## 📂 Structure
-terraform-azure-project/
-│── main.tf
-│── variables.tf
-│── outputs.tf
-│── providers.tf
-│── backend.tf
-│── modules/
+- Microsoft Azure
+- Terraform
+- AKS
+- ACR
+- Docker
+- Kubernetes
 
-## ▶️ Usage
-terraform init  
-terraform plan  
-terraform apply  
+## Resources Created
 
-## 🔐 Best Practices
-- State file excluded
-- Validation added
-- Reusable modules
+- Azure Kubernetes Service (AKS)
+- Azure Container Registry (ACR)
+- Managed Identity
+- Resource Groups
+
+## Features
+
+- Automated AKS deployment
+- Container registry integration
+- Reusable Terraform modules
+
+## Commands
+
+```bash
+terraform init
+terraform validate
+terraform plan
+terraform apply
+```
+
+## Author
+
+Sathyapriya S
