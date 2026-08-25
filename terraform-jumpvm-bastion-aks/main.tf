@@ -16,7 +16,7 @@ resource "azurerm_resource_group" "rg" {
 # Log Analytics
 
 module "log_analytics" {
-  source = "git::https://dev.azure.com/DevopsProject/_git/tf-modules?path=//modules/log-analytics?ref=main"
+  source = "git::https:github.com/example-user/tf-modules?path=//modules/log-analytics?ref==v1.0.0"
 
   rg_name       = azurerm_resource_group.rg.name
   location      = var.location
@@ -26,7 +26,7 @@ module "log_analytics" {
 # Network
 
 module "network" {
-  source = "git::https://dev.azure.com/DevopsProject/_git/tf-modules?path=//modules/network?ref=main"
+  source = "git::https:github.com/example-user/tf-modules?path=//modules/network?ref==v1.0.0"
 
   rg_name  = azurerm_resource_group.rg.name
   location = var.location
@@ -48,7 +48,7 @@ module "network" {
 # Azure Container Registry
 
 module "acr" {
-  source = "git::https://dev.azure.com/DevopsProject/_git/tf-modules?path=//modules/acr?ref=main"
+  source = "git::https:github.com/example-user/tf-modules?path=//modules/acr?ref==v1.0.0"
 
   rg_name  = azurerm_resource_group.rg.name
   location = var.location
@@ -62,7 +62,7 @@ module "acr" {
 # AKS Cluster
 
 module "aks" {
-  source = "git::https://dev.azure.com/DevopsProject/_git/tf-modules?path=//modules/aks?ref=main"
+  source = "git::https:github.com/example-user/tf-modules?path=//modules/aks?ref==v1.0.0"
 
   aks_name                = var.aks_name
   location                = var.location
@@ -101,7 +101,7 @@ module "aks" {
 # Kubernetes Namespaces
 
 module "namespaces" {
-  source = "git::https://dev.azure.com/DevopsProject/_git/tf-modules?path=//modules/namespaces?ref=main"
+  source = "git::https:github.com/example-user/tf-modules?path=//modules/namespaces?ref==v1.0.0"
 
   namespaces = var.namespaces
 
@@ -113,7 +113,7 @@ module "namespaces" {
 # Jump VM
 
 module "jump_vm" {
-  source = "git::https://dev.azure.com/DevopsProject/_git/tf-modules?path=//modules/jump-vm?ref=main"
+  source = "git::https:github.com/example-user/tf-modules?path=//modules/jump-vm?ref==v1.0.0"
 
   rg_name       = azurerm_resource_group.rg.name
   location      = var.location
@@ -136,7 +136,7 @@ module "jump_vm" {
 # Azure Bastion
 
 module "bastion" {
-  source = "git::https://dev.azure.com/DevopsProject/_git/tf-modules?path=//modules/bastion?ref=main"
+  source = "git::https:github.com/example-user/tf-modules?path=//modules/bastion?ref==v1.0.0"
 
   rg_name      = azurerm_resource_group.rg.name
   location     = var.location

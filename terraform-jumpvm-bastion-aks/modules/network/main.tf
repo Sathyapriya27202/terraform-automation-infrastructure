@@ -88,17 +88,17 @@ resource "azurerm_subnet_network_security_group_association" "vm" {
   network_security_group_id = azurerm_network_security_group.vm_nsg.id
 }
 
-# Route Table
+ #Route Table
 
-#resource "azurerm_route_table" "aks_rt" {
- # name                = "${var.vnet_name}-aks-rt"
- # location            = var.location
- # resource_group_name = var.rg_name
+resource "azurerm_route_table" "aks_rt" {
+  name                = "${var.vnet_name}-aks-rt"
+  location            = var.location
+  resource_group_name = var.rg_name
 
- # tags = var.tags
-#}
+  tags = var.tags
+}
 
-#resource "azurerm_subnet_route_table_association" "aks" {
- # subnet_id      = azurerm_subnet.aks.id
- # route_table_id = azurerm_route_table.aks_rt.id
-#}
+resource "azurerm_subnet_route_table_association" "aks" {
+  subnet_id      = azurerm_subnet.aks.id
+  route_table_id = azurerm_route_table.aks_rt.id
+}
